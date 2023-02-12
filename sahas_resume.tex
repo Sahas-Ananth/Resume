@@ -1,0 +1,116 @@
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage{paracol}
+\usepackage{multicol}
+\usepackage{mwe}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\usepackage[left=0.4in,top=0.2in,right=0.4in,bottom=0.2in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\begin{document}
+\setmainfont{Arial}
+\begin{center}
+	\textbf{\LARGE Sahasrajit Anantharamakrishnan}\\
+	\vspace{1ex}
+	\begin{tabular}{c c c c c}
+	     \href{mailto:anantharamakrishn.sa@northeastern.edu}{\small anantharamakrishn.sa@northeastern.edu} & \href{https://www.linkedin.com/in/sahas-ananth/}{LinkedIn(sahas-ananth)} & \href{https://github.com/Sahas-Ananth}{GitHub(Sahas-Ananth)} &
+	     \href{tel:8572062833}{(857) 206-2833} & 
+	     \href{https://goo.gl/maps/rhjbcRKJK2ePYaUHA}{Boston, MA}
+	\end{tabular}
+\end{center}
+
+% \textit{\hspace{8mm}I am proactive about self-learning and gaining familiarity with new programs and skills. As such, I am able to independently work on projects and believe in ensuring a high standard of work which entails good coding practices and scalability in code. Furthermore, I am also a great team-player and appreciate the value of collaboration. In teams, I am able to assume leadership roles and maintain good teamwork environments by encouraging effective communication and motivating colleagues.}
+
+% \textit{\hspace{8mm}I'm a proactive learner and highly adaptable, with a track record of success in tackling new programs and technologies. As a graduate student at Northeastern University studying Robotics Engineering, I bring a strong foundation in this field to every project. I'm also a team player, skilled at fostering a collaborative atmosphere and stepping up to lead when needed. Above all, I'm committed to delivering top-notch results that meet the highest standards of coding practices and scalability.}
+
+%	EDUCATION SECTION
+\begin{rSection}{EDUCATION}
+
+{\bf Northeastern University}, Boston, MA \hfill {\bf May 2024} 
+\\\textit{Master of Science in Robotics Engineering} - \textbf{GPA: 4.0/4.0}\\
+\textbf{Courses:} Mobile Robotics, Computer Vision, Robotics Sensing and Navigation, Reinforcement Learning \& Sequential Decision Making
+
+{\bf Anna University}, Chennai, India \hfill {\bf May 2022} 
+\\\textit{Bachelor of Engineering in Electrical and Electronics Engineering} - \textbf{CGPA: 8.66/10.00}\\
+\textbf{Courses:} Digital Signal Processing, Embedded Systems, Robotics \& Machine Vision System, Control Systems, and Data Structures
+\end{rSection}
+
+\begin{rSection}{SKILLS}
+
+\begin{tabular}{ @ {} >{\bfseries}l @{\hspace{3ex}} l }
+Programming &  Python, C, C$++$, MATLAB, Bash, CMake,  OpenCV, PyTorch, Tensorflow, PCL, LateX \\
+Software and Tools & ROS, Linux, Git, IoT, Simulink, Fusion 360, Blender, Office Suite (Microsoft \& Google)\\
+% Languages & English, Tamil, Hindi
+\end{tabular}
+\end{rSection}
+
+% \begin{rSection}{COURSES}
+
+% \begin{tabular}{ @ {} >{\bfseries}l @{\hspace{6ex}} l }
+% Graduate &  Robotics Sensing and Navigation, Reinforcement Learning \& Sequential Decision Making \\
+% Undergraduate &  Robotics \& Machine Vision System, Control Systems,and Data Structures\\
+% \end{tabular}
+% \end{rSection}
+%	Projects
+\begin{rSection}{WORK EXPERIENCE}
+
+\begin{rSubsectiond}{\textbf{Rigbetal Labs LLP}, Pune, India.}{\textbf{August 2021 - November 2021} \\\textit{Robotics Engineer, Intern}}
+    \item Created a novel algorithm, Road Anomaly Detection System (RADS), with Point Cloud Library (PCL) in C$++$ (roscpp) to detect road anomalies (Potholes, Speed Bumps, etc.) using normal estimation
+    \item Reduced cost by 90\%, by generating a 3D Pointcloud from a series of moving 2D Laserscans
+    \item Simulated in ROS a multi-agent (robot) mapping environment in Gazebo to create a cohesive 2D map
+    \item Tested viability of the same in a cloud environment (AWS Robomaker) to enable multi-user control of an agent
+\end{rSubsectiond}
+
+\begin{rSubsectiond}{\textbf{Capgemini Technologies Services}, Bangalore, India. - \href{https://github.com/Sahas-Ananth/ROS-ASV}{(GitHub)}}{\textbf{July 2020 - December 2020} \\\textit{Robotics (Medical Devices), Intern}}
+    \item Fabricated in Fusion 360 a ROS-based Autonomous Ground Vehicle (AGV) used to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
+    \item Lead software (ROS) engineer in a team of three
+\end{rSubsectiond}
+
+\end{rSection}
+
+\begin{rSection}{PROJECTS}
+\begin{rSubsectiond}{\textbf{Learning Inverse Kinematics using Reinforcement Learning} -  \href{https://github.com/Sahas-Ananth/RL-FinalProject}{GitHub}}{\textbf{October 2022 - December 2022}\\\textit{A 7 DoF robot arm which will reach a goal location trained with Reinforcement Learning}}
+\item Implemented Deep Deterministic Policy Gradients (DDPG), Twin Delayed Deep Deterministic Policy Gradients (TD3), and Proximal Policy Optimization (PPO) algorithms to solve the aforementioned problem
+\item Implemented TD3 algorithm in a team of three and had the performance as compared to other algorithms.
+\end{rSubsectiond}
+
+\begin{rSubsectiond}{\textbf{Intelligent Quads}, \texttt{iq\_gnc} \textbf{(an Open source Project)} - \href{https://github.com/Intelligent-Quads/iq_gnc}{GitHub}}{\textbf{June 2021}\\\textit{An Ardupilot and ROS based quadrotor project with a Guidance and Navigation System}}
+    \item Converted project from C$++$ to Python make it more beginner friendly
+    \item Setup C.I. Pipeline in GitHub actions
+\end{rSubsectiond}
+
+\begin{rSubsectiond}{\textbf{Vargi Bots - e-Yantra Robotics Competition} - \href{https://github.com/Sahas-Ananth/Vargi_Bot_Eyantra}{GitHub}}{\textbf{November 2020 - March 2021}\\\textit{Fabricated two robot arms to sort coloured boxes simultaneously according to priority (order \& colour) in a conveyor belt}}
+
+\item Utilized IoT, ROS, and OpenCV to receive orders and for status updates, control robots, and for colour recognition
+
+\end{rSubsectiond}
+
+\end{rSection}
+
+\begin{rSection}{ACHIEVEMENTS}
+% \begin{rSubsectiond}{Internship Winner}{\textit{July 2021}\\Indian Robotics Community Knowlege Transfer (IRCKT) Competition with a series of tasks based on ROS.}
+% \end{rSubsectiond}
+
+\begin{rSubsectiond}{\textbf{Best paper award}}{\textbf{March 2020}\\\textit{International Conference Presentation EDGE 2020.}}
+\item Refilling a liquid-based optical lens system using a microfluidic pump and channel system in MEMS
+\end{rSubsectiond}
+\begin{rSubsectiond}{\textbf{Best paper award}}{\textbf{March 2020}\\\textit{International Conference Presentation EDGE 2020.}}
+\item Diagnosis Of Hypertrophic Cardiomyopathy Using ORB Image Matching In Python
+\end{rSubsectiond}
+\end{rSection}
+
+% \begin{rSection}{RESPONSIBILITIES}
+% \begin{rSubsectiond}{Robotics, Automation \& AI Project Head}{\textit{November 2020 - November 2021}\\Designers Consortium Club, Rajalakshmi Engineering College}
+% \end{rSubsectiond}
+% \end{rSection}
+\end{document}
