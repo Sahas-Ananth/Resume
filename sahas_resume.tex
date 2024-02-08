@@ -41,7 +41,7 @@
 
 	{\bf Northeastern University}, Boston, MA \hfill {\bf May 2024} 
 	\\\textit{Master of Science in Robotics Engineering} - \textbf{GPA: 4.0/4.0}\\
- 	\textbf{Courses:} Numerical Optimization Methods, Graph Theory, Deep Learning, Autonomous Field Robotics, Mobile Robotics, Computer Vision, Reinforcement Learning \& Sequential Decision Making
+ 	\textbf{Courses:} Legged Robotics, Graph Theory, Deep Learning, Autonomous Field Robotics, Mobile Robotics, Computer Vision, Reinforcement Learning \& Sequential Decision Making
 
 	{\bf Anna University}, Chennai, India \hfill {\bf May 2022} 
 	\\\textit{Bachelor of Engineering in Electrical and Electronics Engineering} - \textbf{CGPA: 8.66/10.00}\\
@@ -52,26 +52,24 @@
     %	Projects
     \begin{rSection}{WORK EXPERIENCE}
 	\begin{rSubsectiond}{\textbf{Autonomy \& Intelligence Laboratory}, Boston, MA, USA. - \href{https://neu-autonomy.github.io/lab_website/team/}{(Website)}}{\textbf{January 2023 - Present} \\\textit{Research Assistant} - \textbf{Project:} \textit{High-Speed, Off-Road Autonomy Robot}}
-	\item Modified and Fine-tuned STEGO, a self-supervised semantic segmentation head, for DINOv1 vision transformer.
-	    \begin{itemize}
-     \vspace{-2mm}
-		\item[-] Achieved clear class clusters for RGB image semantic segmentation
-  \vspace{-2mm}
+        \item Developed an innovative 2.5D terrain model accommodating uncertainties in both the shape and properties of challenging off-road environment
+        \item Crafted a custom cost function for MPC and MPPI controls, prioritizing speed in unstructured environments while considering the robot's kino-dynamics, terrain traversability, and safety constraints
+        \item Optimized the custom MPPI algorithm and optimized it using JAX python, slashing average runtime from \hl{1000 ms} to \hl{1 ms}
+        \item Modified and Fine-tuned STEGO, a self-supervised semantic segmentation head for DINOv1 vision transformer, on RUGD, RELLIS, and a custom dataset to achieve clear class clusters for RGB image semantic segmentation
+             % \vspace{-2mm}
 		% \item[-] Increased robustness and adaptability to diverse environments through self-supervised learning
-		\item[-] Planned future incorporation of online learning in STEGO to increase robustness to unknown objects.
-	    \end{itemize}
+		% \item[-] Planned future incorporation of online learning in STEGO to increase robustness to unknown objects.
+	    % \end{itemize}
 	    % \item Implemented STEGO, a self-supervised semantic segmentation AI model, utilizing DINOv1 Vision Transformer as its backbone. Addressed the curse of dimensions problem, resulting in clear semantic class clusters for RGB image segmentation.
 	    % \item Facilitated deployment in diverse environments by utilizing self-supervised learning of STEGO thereby reducing reliance on human annotation, and enhancing the adaptability and robustness of the algorithm.
 	% \item Designed and fabricated a custom high-speed, off-road mobile robot using Fusion 360, to enable seamless customization
-	% \item Implemented sensor fusion in ROS between 3D-LiDAR and semantic image, obtaining sematic point cloud for perception
-        \item Employed sensor fusion techniques to combine 3D-LiDAR data with semantically segmented RGB images, resulting in a Semantic Point Cloud, essential for downstream perception, control and motion planning tasks
-        \item Improved the Direct LiDAR-Inertial Odometry (DLIO) SLAM algorithm to accept semantic point cloud as additional input, enabling the integration of semantic information derived from the vision transformer model
+	% \item Implemented sensor fusion in ROS between 3D-LiDAR and semantic image, obtaining semantic point cloud for perception
+        \item Employed sensor fusion techniques to combine 3D-LiDAR data with semantically segmented RGB images, resulting in a Semantic Point Cloud, essential for downstream perception, control, and motion planning tasks
+        % \item Improved the Direct LiDAR-Inertial Odometry (DLIO) SLAM algorithm to accept semantic point cloud as additional input, enabling the integration of semantic information derived from the vision transformer model
         % \item Integrated SLAM (Simultaneous Localization and Mapping) and autonomous navigation algorithms, in both ROS1 and ROS2, enabling high-speed offroad autonomy capability in mobile robots
-        \item Developed a tailored navigation system encompassing representation, planning, and control components for operation in challenging, unstructured off-road terrain
-        \item Optimized MPC and MPPI algorithms using JAX, slashing average runtime from 1000 ms to 8 ms for a tailored cost function to ensure resilient planning and optimal control in challenging off-road terrains.
         \item Utilized Fusion 360 to engineer and assemble a customized compute and sensor suite payload, designed to meet the distinct needs of AgileX's scout and Clearpath's Warthog robotic platforms, to enable high-speed offroad autonomy capability
 	    % \item Developed a novel Vision Transformer-based Deep Neural Network for Semantic Segmentation of RGB/RGB-D images.
-	    % \item Incorporated Unsupervised and online learning techniques to enhance the network's robustness.
+	    % \item Incorporated Unsupervised and oOnline -learning techniques to enhance the network's robustness.
 	    % \item Designed and Fabricated a custom Mobile Robot with High-Speed, Off-Road Autonomy capabilities.
 	    % \item Implemented sensor fusion between 3D-LiDAR and camera to obtain precise RGB-D images.
 	\end{rSubsectiond}
@@ -95,7 +93,7 @@
 \vspace{-3mm}
     \begin{rSection}{SKILLS}
 	\begin{tabular}{ @ {} >{\bfseries}l @{\hspace{3ex}} l }
-	    Languagues / Libraries &  Python, PyTorch, JAX, C++, C, MATLAB, OpenCV, Tensorflow, PCL, CUDA\\
+	    Languagues / Libraries &  Python, PyTorch, JAX, C$++$, C, MATLAB, OpenCV, Tensorflow, PCL, CUDA\\
 	    Software and Tools & ROS, Ubuntu Linux, Git, LaTeX, CMake, Docker, Gazebo, Nvidia Issac Sim, \\
 	    & MQTT, Simulink, Fusion 360, Blender\\
 	    % Languages & English, Tamil, Hindi

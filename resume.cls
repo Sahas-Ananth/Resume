@@ -35,6 +35,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{fontspec}
+\usepackage{color,soul}
 
 %--------------------------------------------------------------
 \usepackage{color}
