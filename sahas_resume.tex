@@ -45,11 +45,16 @@
 
 % WORK EXPERIENCE SECTION
 \begin{rSection}{WORK EXPERIENCE}
-	\begin{rProjExpDetails}{Autonomy \& Intelligence Laboratory}{Boston, MA}{January 2023 - May 2024}{Graduate Research Assistant, \textbf{Project:} High-Speed Off-Road Autonomy Robot}{https://neu-autonomy.github.io/lab_website/team/}{Lab Link}
+	\begin{rProjExpDetails}{Robotics and Intelligent Vehicles Research Laboratory (RIVeR)}{Boston, MA}{May 2024 - Present}{Robotics Research Assistant, \textbf{Project:} Stochastic Model Predictive Control for bipedal loco-manipulation}{}{}
+		\item Introduced probabilistic models into traditional MPC to create Stochastic MPC (SMPC), to improve adaptability and robustness against uneven terrain and unexpected loads.
+		\item Spearheaded the adaptation of the SMPC framework from quadrupedal to bipedal robots to demonstrate its generalizability, using simulation platforms such as PyBullet and Gazebo
+		\item Refined the dynamics model and cost function to satisfy the constraints of the bipedal robot to guarantee stability % and efficiency
+	\end{rProjExpDetails}
+	\begin{rProjExpDetails}{Autonomy \& Intelligence Laboratory}{Boston, MA}{January 2023 - May 2024}{Robotics Research Assistant, \textbf{Project:} High-Speed Off-Road Autonomy Robot}{https://neu-autonomy.github.io/lab_website/team/}{Lab Link}
 		\item Developed an innovative 2.5D terrain model accommodating uncertainties in both the shape and properties of challenging off-road environment
-		\item Crafted a custom cost function for MPC and MPPI controls, prioritizing speed in unstructured environments while considering the robot's kino-dynamics, terrain traversability, and safety constraints
-		\item Optimized the custom MPPI algorithm and optimized it using JAX python, slashing average run time from \hl{1000 ms} to \hl{1 ms}
-		\item Modified and Fine-tuned STEGO, a self-supervised semantic segmentation head for DINOv1 vision transformer, on RUGD, RELLIS, and a custom dataset to achieve clear class clusters for RGB image semantic segmentation
+		\item Created and Optimized a custom MPPI algorithm using JAX python, slashing average run time from \hl{1000 ms} to \hl{1 ms}
+		\item Crafted a custom cost function for MPPI controls, prioritizing speed in unstructured environments while considering the robot's kino-dynamics, terrain traversability, and safety constraints
+		\item Fine-tuned STEGO, a self-supervised semantic segmentation head for DINOv1 vision transformer, on RUGD, RELLIS, and a custom dataset to achieve clear class clusters for RGB image semantic segmentation
 		% \vspace{-2mm}
 		% \item[-] Increased robustness and adaptability to diverse environments through self-supervised learning
 		% \item[-] Planned future incorporation of online learning in STEGO to increase robustness to unknown objects.
@@ -69,17 +74,17 @@
 	\end{rProjExpDetails}
 
 	\begin{rProjExpDetails}{Rigbetal Labs LLP}{Pune, India}{August 2021 - November 2021}{Robotics Engineer Intern}{}{}
-		\item Created a novel algorithm, Road Anomaly Detection System (RADS), in C$++$ to detect road anomalies (Potholes, Speed Bumps, etc.) using normal estimation
+		\item Formulated a novel algorithm, Road Anomaly Detection System (RADS), in C$++$ to detect road anomalies (Potholes, Speed Bumps, etc.) using normal estimation
 		\item Reduced cost by 90\%, by generating a 3D Point cloud from a series of moving 2D Laser scans
 		\item Simulated a multi-agent (robot) mapping environment in Gazebo ROS to create a cohesive 2D map
 		\begin{itemize}
-			\item Tested viability of the same in a cloud environment (AWS Robomaker) to enable multi-user control of an agent
+			\item Deployed the same in a cloud environment using AWS Robomaker to enable remote multi-user control of an agents
 		\end{itemize}
 	\end{rProjExpDetails}
 
 	\begin{rProjExpDetails}{Capgemini Technologies Services}{Bangalore, India}{July 2020 - December 2020}{Robotics (Medical Devices) Intern}{https://github.com/Sahas-Ananth/ROS-ASV}{}
-		\item Designed in Fusion 360 a ROS-based autonomous ground vehicle to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
-		\item Managed Communications and task delegation between the team and the client
+		\item Fabricated a ROS-based autonomous ground vehicle in Fusion 360 to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
+		\item Directed communication and task distribution between the team and clients, enhancing team efficiency and client relations.
 	\end{rProjExpDetails}
 \end{rSection}
 % \vspace{-3mm}
@@ -90,18 +95,19 @@
 		                      & Fusion 360, Blender, LaTeX                                                                \\
 	\end{tabular}
 \end{rSection}
-\vspace{-3.5mm}
+\vspace{-3.0mm}
 \begin{rSection}{PROJECTS}
-	\begin{rProjExpDetails}{Stochastic Model Predictive Control for quadrupedal and bipedal loco-manipulation}{}{April 2024 - Present}{Stochastic MPC (SMPC) introduces probabilistic models to MPC, improving robustness against uncertainties like variable terrain and unexpected loads in robot dynamics}{}{}
-		% \item Stochastic MPC (SMPC) introduces probabilistic models to MPC, improving robustness against uncertainties like variable terrain and unexpected loads
-		\item Spearheaded the adaptation of the SMPC framework to bipedal robots in simulation such as PyBullet and Gazebo
-		\item Refined mathematical models and cost functions to optimize bipedal robot stability and efficiency %, preparing foundational research for publication.
-	\end{rProjExpDetails}
+	% TODO: Add SLAM project.
+	% \begin{rProjExpDetails}{Stochastic Model Predictive Control for quadrupedal and bipedal loco-manipulation}{}{April 2024 - Present}{Stochastic MPC (SMPC) introduces probabilistic models to MPC, improving robustness against uncertainties like variable terrain and unexpected loads in robot dynamics}{}{}
+	% 	% \item Stochastic MPC (SMPC) introduces probabilistic models to MPC, improving robustness against uncertainties like variable terrain and unexpected loads
+	% 	\item Spearheaded the adaptation of the SMPC framework to bipedal robots in simulation such as PyBullet and Gazebo
+	% 	\item Refined mathematical models and cost functions to optimize bipedal robot stability and efficiency %, preparing foundational research for publication.
+	% \end{rProjExpDetails}
 
 	\begin{rProjExpDetails}{Implementing Batch Informed Trees (BIT*) Motion planning Algorithm}{}{March 2023 - April 2023}{Paper: \href{https://journals.sagepub.com/doi/pdf/10.1177/0278364919890396}{\textit{Batch Informed Trees (BIT*): Informed asymptotically optimal anytime search}}}{https://sahas-ananth.github.io/projects/BIT_star.html}{}
-		\item Optimized the intensive calculations in the algorithm using hash-maps, parallelization, and pre-computation in python.
-		\item Designed intuitive visualization techniques to better analyze the BIT* algorithm.
-		\item Tested the algorithm against baselines results such as RRT, RRT*, FMT*, and RRT Connect.
+		\item Reduced the run-time of the algorithm in python using hash-maps, parallelization, and caching
+		\item Engineered intuitive visualization techniques to better analyze the BIT* algorithm
+		\item Tested the algorithm against baselines results such as RRT, RRT*, FMT*, and RRT Connect
 	\end{rProjExpDetails}
 	%
 	% \begin{rProjExpDetails}{Learning Inverse Kinematics using Reinforcement Learning}{}{October 2022 - December 2022}{A 7 DoF robot arm which will reach a goal location trained with Reinforcement Learning}{https://github.com/Sahas-Ananth/RL-FinalProject}{}
