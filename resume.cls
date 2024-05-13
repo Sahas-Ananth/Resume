@@ -25,7 +25,7 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{graphicx}
 \pagestyle{empty} % Suppress page numbers
@@ -36,6 +36,7 @@
 \usepackage{amsmath}
 \usepackage{fontspec}
 \usepackage{color,soul}
+\usepackage{enumitem}
 
 %--------------------------------------------------------------
 \usepackage{color}
@@ -49,7 +50,6 @@
 
 %light background / accent color
 \definecolor{softcol}{RGB}{100,100,100}
-
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
@@ -67,32 +67,32 @@
 
 % \address command can be used to set the first, second, and third address (last 2 optional)
 \def \address #1{
-  \@ifundefined{@addresstwo}{
-    \def \@addresstwo {#1}
-  }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
+	\@ifundefined{@addresstwo}{
+		\def \@addresstwo {#1}
+	}{
+		\@ifundefined{@addressthree}{
+			\def \@addressthree {#1}
+		}{
+			\def \@addressone {#1}
+		}}
 }
 
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
+\begingroup
+\def \\ {\addressSep\ }
+\centerline{#1}
+\endgroup
+\par
+\addressskip
 }
 
 % \printname is used to print the name as a page header
 \def \printname {
-  \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
-  \endgroup
+	\begingroup
+	\hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+	\nameskip\break
+	\endgroup
 }
 
 %----------------------------------------------------------------------------------------
@@ -101,14 +101,14 @@
 
 \let\ori@document=\document
 \renewcommand{\document}{
-  \ori@document  % Begin document
-  \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
+	\ori@document  % Begin document
+	\printname % Print the name specified with \name
+	\@ifundefined{@addressone}{}{ % Print the first address if specified
+		\printaddress{\@addressone}}
+	\@ifundefined{@addresstwo}{}{ % Print the second address if specified
+		\printaddress{\@addresstwo}}
+	\@ifundefined{@addressthree}{}{ % Print the third address if specified
+		\printaddress{\@addressthree}}
 }
 
 %----------------------------------------------------------------------------------------
@@ -117,19 +117,19 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
-  \sectionskip
-  \colorbox{white}{\makebox[1\linewidth][l]{
-\textcolor{black}{\textbf{#1}}\hspace{4pt}
-}}
-  %\MakeUppercase{\bf #1} % Section title
-  %\sectionlineskip
-  \hrule % Horizontal line
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em} % Margin within the section
-  }
-  \item[]
-}{
-  \end{list}
+	% \sectionskip
+	\colorbox{white}{\makebox[1\linewidth][l]{
+			\textcolor{black}{\textbf{#1}}\hspace{4pt}
+		}}
+	%\MakeUppercase{\bf #1} % Section title
+	%\sectionlineskip
+	\hrule % Horizontal line
+	\begin{list}{}{ % List for each individual item in the section
+			\setlength{\leftmargin}{1.5em} % Margin within the section
+		}
+		\item[]
+		      }{
+	\end{list}
 }
 
 %----------------------------------------------------------------------------------------
@@ -152,90 +152,90 @@
 %	Position of Responsibility Formatting
 %----------------------------------------------------------------------------------------
 \newenvironment{rSubsectiona}[4]{ % 5 input arguments - University, Time period, Lab, Prof, Title and Location
- {\bf #1} \hfill {#2} % Bold university and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {#3} \hfill {#4} % Italic Lab and location
-  }\smallskip
-  \begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+{\bf #1} \hfill {#2} % Bold university and date on the right
+\ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\\
+{#3} \hfill {#4} % Italic Lab and location
+}\smallskip
+\begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+	\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+	}{
+\end{list}
+\vspace{0.5em} % Some space after the list of bullet points
 }
 
 %----------------------------------------------------------------------------------------
 \newenvironment{rSubsectione}[0]{
-\smallskip
-  \begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+	\smallskip
+	\begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+		\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+		}{
+	\end{list}
+	\vspace{0.5em} % Some space after the list of bullet points
 }
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 5 input arguments - University, Time period, Lab, Prof, Title and Location
- {\bf #1} \hfill {\em #2} % Bold university and date on the right
- \ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\bf #4} % Italic Lab and location
+{\bf #1} \hfill {\em #2} % Bold university and date on the right
+\ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\\
+{\em #3} \hfill {\bf #4} % Italic Lab and location
 
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+}\smallskip
+\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+	\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+	}{
+\end{list}
+\vspace{0.5em} % Some space after the list of bullet points
 }
 %-------------------------------------------------------------------
 \newenvironment{rSubsectionb}[4]{ % 5 input arguments - University, Time period, Lab, Prof, Title and Location
- {\bf #1} \hfill {#2} % Bold university and date on the right
- \ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\bf #3} \hfill {\em #4} % Italic Lab and location 
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+{\bf #1} \hfill {#2} % Bold university and date on the right
+\ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\\
+{\bf #3} \hfill {\em #4} % Italic Lab and location 
+}\smallskip
+\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+	\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+	}{
+\end{list}
+\vspace{0.5em} % Some space after the list of bullet points
 }
 %-------------------------------------------------------------------
 \newenvironment{rSubsectionc}[4]{ % 5 input arguments - University, Time period, Lab, Prof, Title and Location
- {\bf #1} \hfill {#2} % Bold university and date on the right
- \ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4}
-  }\smallskip
-  \begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+{\bf #1} \hfill {#2} % Bold university and date on the right
+\ifthenelse{\equal{#4}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+\\
+{\em #3} \hfill {\em #4}
+}\smallskip
+\begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+	\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+	}{
+\end{list}
+\vspace{0.5em} % Some space after the list of bullet points
 }
 %-------------------------------------------------------------------
 
 %-------------------------------------------------------------------
 \newenvironment{rSubsectiond}[2]{ % 5 input arguments - University, Time period, Lab, Prof, Title and Location
- {#1} \hfill {#2} % Bold university and date on the right
- \ifthenelse{\equal{#1}{}}{}{ % If the third argument is not specified, don't print the job title and location line 
-  }\smallskip
-  \begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.25em} % Some space after the list of bullet points
+	{#1} \hfill {#2} % Bold university and date on the right
+	\ifthenelse{\equal{#1}{}}{}{ % If the third argument is not specified, don't print the job title and location line 
+	}\smallskip
+	\begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+		\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+		}{
+	\end{list}
+	\vspace{0.25em} % Some space after the list of bullet points
 }
 %-------------
 \newenvironment{rSubsectionf}[2]{ % 5 input arguments - University, Time period, Lab, Prof, Title and Location
- {#1}  % Bold university and date on the right
-  \begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{0.25em} % Some space after the list of bullet points
+	{#1}  % Bold university and date on the right
+	\begin{list}{$\bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+		\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+		}{
+	\end{list}
+	\vspace{0.25em} % Some space after the list of bullet points
 }
 
 %-------------------------------------------------------------------
@@ -245,3 +245,48 @@
 \def\sectionlineskip{\smallskip} % The space above the horizontal line for each section 
 \def\nameskip{\smallskip} % The space after your name at the top
 \def\sectionskip{\smallskip} % The space after the heading section
+
+% Sahas' custom environment
+%-------------------------------------------------------------------
+% 6 Input Arguments:
+% 1. University Name
+% 2. Location of University
+% 3. Start and End Date
+% 4. Degree Name
+% 5. GPA
+% 6. Name of the courses (optional)
+\newcommand{\rEducation}[6]{
+	\textbf{#1}, {#2} \hfill \textbf{#3}\\
+	\textit{#4} \hfill \textbf{GPA: #5}\\
+	% If the sixth argument is not specified, don't print the courses
+	\ifthenelse{\equal{#6}{}}{}{
+		\textbf{Courses:} {#6}
+	}
+}
+%-------------------------------------------------------------------
+% Takes 6 arguments:
+% 1. Company Name
+% 2. Location of Company (optional) - If the second argument is not specified, the location will not be printed
+% 3. Start and End Date
+% 4. Job Title
+% 5. Project/Company Link (optional)
+% 6. Link Text (optional) - If the fifth argument is specified, and the sixth argument is not specified, the link text will be "Project Link" else it will be the sixth argument
+\newenvironment{rProjExpDetails}[6]{
+	\ifthenelse{\equal{#2}{}}{
+		\textbf{#1} \hfill \textbf{#3}\\
+	}{
+		\textbf{#1}, {#2} \hfill \textbf{#3}\\
+	}
+	\ifthenelse{\equal{#5}{}}{
+		\textit{#4}\nolinebreak
+	}{
+		\ifthenelse{\equal{#6}{}}{
+			\textit{#4} \hfill \href{#5}{Project Link}\nolinebreak
+		}{
+			\textit{#4} \hfill \href{#5}{#6}\nolinebreak
+		}
+	}
+	\begin{itemize}[nosep, leftmargin=0em]
+		}{
+	\end{itemize}
+}

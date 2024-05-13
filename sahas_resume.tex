@@ -1,8 +1,5 @@
 %! TeX program = xelatex
 \documentclass{resume} % Use the custom resume.cls style
-\usepackage{paracol}
-\usepackage{multicol}
-\usepackage{mwe}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{fancyvrb}
@@ -12,141 +9,141 @@
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=blue,
-    }
+}
 
-    \usepackage[left=0.4in,top=0.1in,right=0.4in,bottom=0.3in]{geometry} % Document margins
-    \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-    \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\usepackage[left=0.4in,top=0.1in,right=0.4in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
-    \begin{document}
-    \setmainfont{Arial}
-    \begin{center}
+\begin{document}
+\setmainfont{Arial}
+\begin{center}
 	\textbf{\LARGE Sahasrajit Anantharamakrishnan}\\
 	\vspace{1ex}
 	\begin{tabular}{c c c c}
-	    \href{mailto:anantharamakrishn.sa@northeastern.edu}{\small anantharamakrishn.sa@northeastern.edu} & 
-	    \href{tel:8572062833}{(857) 206-2833} & 
-        \href{https://www.linkedin.com/in/sahas-ananth/}{linkedin.com/in/sahas-ananth} &
-        \href{https://sahas-ananth.github.io/}{sahas-ananth.github.io}
-        % \href{https://github.com/Sahas-Ananth}{GitHub(Sahas-Ananth)} &
-	    % \href{https://goo.gl/maps/rhjbcRKJK2ePYaUHA}{Boston, MA}
+		\href{mailto:anantharamakrishn.sa@northeastern.edu}{\small anantharamakrishn.sa@northeastern.edu} &
+		% \href{mailto:sahas_ananth@outlook.com}{sahas\_ananth@outlook.com}              &
+		\href{tel:18572062833}{+1 (857) 206-2833}                                                         &
+		\href{https://www.linkedin.com/in/sahas-ananth/}{linkedin.com/in/sahas-ananth}                    &
+		\href{https://sahas-ananth.github.io/}{sahas-ananth.github.io}
+		% \href{https://github.com/Sahas-Ananth}{GitHub(Sahas-Ananth)} &
+		% \href{https://goo.gl/maps/rhjbcRKJK2ePYaUHA}{Boston, MA}
 	\end{tabular}
-    \end{center}
+\end{center}
 
-    % \textit{\hspace{8mm}I am proactive about self-learning and gaining familiarity with new programs and skills. As such, I am able to independently work on projects and believe in ensuring a high standard of work which entails good coding practices and scalability in code. Furthermore, I am also a great team-player and appreciate the value of collaboration. In teams, I am able to assume leadership roles and maintain good teamwork environments by encouraging effective communication and motivating colleagues.}
+% \textit{\hspace{8mm}I am proactive about self-learning and gaining familiarity with new programs and skills. As such, I am able to independently work on projects and believe in ensuring a high standard of work which entails good coding practices and scalability in code. Furthermore, I am also a great team-player and appreciate the value of collaboration. In teams, I am able to assume leadership roles and maintain good teamwork environments by encouraging effective communication and motivating colleagues.}
 
-    % \textit{\hspace{8mm}I'm a proactive learner and highly adaptable, with a track record of success in tackling new programs and technologies. As a graduate student at Northeastern University studying Robotics Engineering, I bring a strong foundation in this field to every project. I'm also a team player, skilled at fostering a collaborative atmosphere and stepping up to lead when needed. Above all, I'm committed to delivering top-notch results that meet the highest standards of coding practices and scalability.}
+% \textit{\hspace{8mm}I'm a proactive learner and highly adaptable, with a track record of success in tackling new programs and technologies. As a graduate student at Northeastern University studying Robotics Engineering, I bring a strong foundation in this field to every project. I'm also a team player, skilled at fostering a collaborative atmosphere and stepping up to lead when needed. Above all, I'm committed to delivering top-notch results that meet the highest standards of coding practices and scalability.}
 
-    %	EDUCATION SECTION
-    \begin{rSection}{EDUCATION}
+% EDUCATION SECTION
+\begin{rSection}{EDUCATION}
+	\rEducation{Northeastern University}{Boston, MA}{May 2024}{Master of Science in Robotics Engineering}{3.939/4.000}{Legged Robotics, Graph Theory, Deep Learning, Autonomous Field Robotics, Mobile Robotics, Computer Vision, Reinforcement Learning \& Sequential Decision Making}
 
-	{\bf Northeastern University}, Boston, MA \hfill {\bf May 2024} 
-	\\\textit{Master of Science in Robotics Engineering} - \textbf{GPA: 4.0/4.0}\\
- 	\textbf{Courses:} Legged Robotics, Graph Theory, Deep Learning, Autonomous Field Robotics, Mobile Robotics, Computer Vision, Reinforcement Learning \& Sequential Decision Making
+	\rEducation{Anna University}{Chennai, India}{May 2022}{Bachelor of Engineering in Electrical and Electronics Engineering}{8.66/10.00}{}%{Digital Signal Processing, Embedded Systems, Robotics \& Machine Vision System, Control Systems, and Data Structures}\\
+\end{rSection}
+\vspace{-5mm}
 
-	{\bf Anna University}, Chennai, India \hfill {\bf May 2022} 
-	\\\textit{Bachelor of Engineering in Electrical and Electronics Engineering} - \textbf{CGPA: 8.66/10.00}\\
-	% \textbf{Courses:} Digital Signal Processing, Embedded Systems, Robotics \& Machine Vision System, Control Systems, and Data Structures
-    \end{rSection}
-    \vspace{-5mm}
-
-    %	Projects
-    \begin{rSection}{WORK EXPERIENCE}
-	\begin{rSubsectiond}{\textbf{Autonomy \& Intelligence Laboratory}, Boston, MA, USA. - \href{https://neu-autonomy.github.io/lab_website/team/}{(Website)}}{\textbf{January 2023 - Present} \\\textit{Research Assistant} - \textbf{Project:} \textit{High-Speed, Off-Road Autonomy Robot}}
-        \item Developed an innovative 2.5D terrain model accommodating uncertainties in both the shape and properties of challenging off-road environment
-        \item Crafted a custom cost function for MPC and MPPI controls, prioritizing speed in unstructured environments while considering the robot's kino-dynamics, terrain traversability, and safety constraints
-        \item Optimized the custom MPPI algorithm and optimized it using JAX python, slashing average runtime from \hl{1000 ms} to \hl{1 ms}
-        \item Modified and Fine-tuned STEGO, a self-supervised semantic segmentation head for DINOv1 vision transformer, on RUGD, RELLIS, and a custom dataset to achieve clear class clusters for RGB image semantic segmentation
-             % \vspace{-2mm}
+% WORK EXPERIENCE SECTION
+\begin{rSection}{WORK EXPERIENCE}
+	\begin{rProjExpDetails}{Autonomy \& Intelligence Laboratory}{Boston, MA}{January 2023 - May 2024}{Graduate Research Assistant, \textbf{Project:} High-Speed Off-Road Autonomy Robot}{https://neu-autonomy.github.io/lab_website/team/}{Lab Link}
+		\item Developed an innovative 2.5D terrain model accommodating uncertainties in both the shape and properties of challenging off-road environment
+		\item Crafted a custom cost function for MPC and MPPI controls, prioritizing speed in unstructured environments while considering the robot's kino-dynamics, terrain traversability, and safety constraints
+		\item Optimized the custom MPPI algorithm and optimized it using JAX python, slashing average run time from \hl{1000 ms} to \hl{1 ms}
+		\item Modified and Fine-tuned STEGO, a self-supervised semantic segmentation head for DINOv1 vision transformer, on RUGD, RELLIS, and a custom dataset to achieve clear class clusters for RGB image semantic segmentation
+		% \vspace{-2mm}
 		% \item[-] Increased robustness and adaptability to diverse environments through self-supervised learning
 		% \item[-] Planned future incorporation of online learning in STEGO to increase robustness to unknown objects.
-	    % \end{itemize}
-	    % \item Implemented STEGO, a self-supervised semantic segmentation AI model, utilizing DINOv1 Vision Transformer as its backbone. Addressed the curse of dimensions problem, resulting in clear semantic class clusters for RGB image segmentation.
-	    % \item Facilitated deployment in diverse environments by utilizing self-supervised learning of STEGO thereby reducing reliance on human annotation, and enhancing the adaptability and robustness of the algorithm.
-	% \item Designed and fabricated a custom high-speed, off-road mobile robot using Fusion 360, to enable seamless customization
-	% \item Implemented sensor fusion in ROS between 3D-LiDAR and semantic image, obtaining semantic point cloud for perception
-        \item Employed sensor fusion techniques to combine 3D-LiDAR data with semantically segmented RGB images, resulting in a Semantic Point Cloud, essential for downstream perception, control, and motion planning tasks
-        % \item Improved the Direct LiDAR-Inertial Odometry (DLIO) SLAM algorithm to accept semantic point cloud as additional input, enabling the integration of semantic information derived from the vision transformer model
-        % \item Integrated SLAM (Simultaneous Localization and Mapping) and autonomous navigation algorithms, in both ROS1 and ROS2, enabling high-speed offroad autonomy capability in mobile robots
-        \item Utilized Fusion 360 to engineer and assemble a customized compute and sensor suite payload, designed to meet the distinct needs of AgileX's scout and Clearpath's Warthog robotic platforms, to enable high-speed offroad autonomy capability
-	    % \item Developed a novel Vision Transformer-based Deep Neural Network for Semantic Segmentation of RGB/RGB-D images.
-	    % \item Incorporated Unsupervised and oOnline -learning techniques to enhance the network's robustness.
-	    % \item Designed and Fabricated a custom Mobile Robot with High-Speed, Off-Road Autonomy capabilities.
-	    % \item Implemented sensor fusion between 3D-LiDAR and camera to obtain precise RGB-D images.
-	\end{rSubsectiond}
+		% \end{itemize}
+		% \item Implemented STEGO, a self-supervised semantic segmentation AI model, utilizing DINOv1 Vision Transformer as its backbone. Addressed the curse of dimensions problem, resulting in clear semantic class clusters for RGB image segmentation.
+		% \item Facilitated deployment in diverse environments by utilizing self-supervised learning of STEGO thereby reducing reliance on human annotation, and enhancing the adaptability and robustness of the algorithm.
+		% \item Designed and fabricated a custom high-speed, off-road mobile robot using Fusion 360, to enable seamless customization
+		% \item Implemented sensor fusion in ROS between 3D-LiDAR and semantic image, obtaining semantic point cloud for perception
+		\item Employed sensor fusion techniques to combine 3D-LiDAR data with semantically segmented RGB images, resulting in a Semantic Point Cloud, essential for downstream perception, control, and motion planning tasks
+		% \item Improved the Direct LiDAR-Inertial Odometry (DLIO) SLAM algorithm to accept semantic point cloud as additional input, enabling the integration of semantic information derived from the vision transformer model
+		% \item Integrated SLAM (Simultaneous Localization and Mapping) and autonomous navigation algorithms, in both ROS1 and ROS2, enabling high-speed off-road autonomy capability in mobile robots
+		\item Utilized Fusion 360 to engineer and assemble a customized compute and sensor suite payload, designed to meet the distinct needs of AgileX's scout and Clearpath's Warthog robotic platforms, to enable high-speed offroad autonomy capability
+		% \item Developed a novel Vision Transformer-based Deep Neural Network for Semantic Segmentation of RGB/RGB-D images.
+		% \item Incorporated Unsupervised and oOnline -learning techniques to enhance the network's robustness.
+		% \item Designed and Fabricated a custom Mobile Robot with High-Speed, Off-Road Autonomy capabilities.
+		% \item Implemented sensor fusion between 3D-LiDAR and camera to obtain precise RGB-D images.
+	\end{rProjExpDetails}
 
-	\begin{rSubsectiond}{\textbf{Rigbetal Labs LLP}, Pune, India.}{\textbf{August 2021 - November 2021} \\\textit{Robotics Engineer, Intern}}
-	\item Created a novel algorithm, Road Anomaly Detection System (RADS), in C$++$ to detect road anomalies (Potholes, Speed Bumps, etc.) using normal estimation
-	\item Reduced cost by 90\%, by generating a 3D Pointcloud from a series of moving 2D Laserscans
-	\item Simulated a multi-agent (robot) mapping environment in Gazebo ROS to create a cohesive 2D map
-	\begin{itemize}
- \vspace{-2mm}
-	    \item[-] Tested viability of the same in a cloud environment (AWS Robomaker) to enable multi-user control of an agent
-	\end{itemize}
-	\end{rSubsectiond}
+	\begin{rProjExpDetails}{Rigbetal Labs LLP}{Pune, India}{August 2021 - November 2021}{Robotics Engineer Intern}{}{}
+		\item Created a novel algorithm, Road Anomaly Detection System (RADS), in C$++$ to detect road anomalies (Potholes, Speed Bumps, etc.) using normal estimation
+		\item Reduced cost by 90\%, by generating a 3D Point cloud from a series of moving 2D Laser scans
+		\item Simulated a multi-agent (robot) mapping environment in Gazebo ROS to create a cohesive 2D map
+		\begin{itemize}
+			\item Tested viability of the same in a cloud environment (AWS Robomaker) to enable multi-user control of an agent
+		\end{itemize}
+	\end{rProjExpDetails}
 
-	\begin{rSubsectiond}{\textbf{Capgemini Technologies Services}, Bangalore, India. - \href{https://github.com/Sahas-Ananth/ROS-ASV}{(GitHub)}}{\textbf{July 2020 - December 2020} \\\textit{Robotics (Medical Devices), Intern}}
-	\item Designed in Fusion 360 a ROS-based autonomous ground vehicle to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
-	\item Managed Communications and task delegation between the team and the client
-	\end{rSubsectiond}
-
-    \end{rSection}
-\vspace{-3mm}
-    \begin{rSection}{SKILLS}
+	\begin{rProjExpDetails}{Capgemini Technologies Services}{Bangalore, India}{July 2020 - December 2020}{Robotics (Medical Devices) Intern}{https://github.com/Sahas-Ananth/ROS-ASV}{}
+		\item Designed in Fusion 360 a ROS-based autonomous ground vehicle to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
+		\item Managed Communications and task delegation between the team and the client
+	\end{rProjExpDetails}
+\end{rSection}
+% \vspace{-3mm}
+\begin{rSection}{SKILLS}
 	\begin{tabular}{ @ {} >{\bfseries}l @{\hspace{3ex}} l }
-	    Languagues / Libraries &  Python, PyTorch, JAX, C$++$, C, MATLAB, OpenCV, Tensorflow, PCL, CUDA\\
-	    Software and Tools & ROS, Ubuntu Linux, Git, LaTeX, CMake, Docker, Gazebo, Nvidia Issac Sim, \\
-	    & MQTT, Simulink, Fusion 360, Blender\\
-	    % Languages & English, Tamil, Hindi
+		Languages / Libraries & Python, PyTorch, JAX, C$++$, CUDA, C, MATLAB, OpenCV, Tensorflow, PCL                     \\
+		Software and Tools    & ROS, Ubuntu Linux, Git, CMake, Docker, Gazebo, Nvidia Issac Sim, PyBullet, MQTT, Simulink \\
+		                      & Fusion 360, Blender, LaTeX                                                                \\
 	\end{tabular}
-    \end{rSection}
+\end{rSection}
 \vspace{-3.5mm}
-    \begin{rSection}{PROJECTS}
-	\begin{rSubsectiond}{\textbf{Implementing Batch Informed Trees (BIT*) Motion planning Algorithm} - \href{https://sahas-ananth.github.io/projects/BIT_star.html}{(More Info)}}{\textbf{March 2023 - April 2023}\\ \href{https://journals.sagepub.com/doi/pdf/10.1177/0278364919890396}{\textit{Batch Informed Trees (BIT*): Informed asymptotically optimal anytime search}}}
-	\item Optimized the intensive calculations in the algorithm using hash-maps, parallelization, and pre-computation in python.
-	\item Designed intuitive visualization techniques to better analyze the BIT* algorithm.
-	\item Tested the algorithm against baselines results such as RRT, RRT*, FMT*, and RRT Connect.
-	    % \item Built the algorithm as ROS-Navigation core plugin in Turtlebot3.
-	\end{rSubsectiond}
+\begin{rSection}{PROJECTS}
+	\begin{rProjExpDetails}{Stochastic Model Predictive Control for quadrupedal and bipedal loco-manipulation}{}{April 2024 - Present}{Stochastic MPC (SMPC) introduces probabilistic models to MPC, improving robustness against uncertainties like variable terrain and unexpected loads in robot dynamics}{}{}
+		% \item Stochastic MPC (SMPC) introduces probabilistic models to MPC, improving robustness against uncertainties like variable terrain and unexpected loads
+		\item Spearheaded the adaptation of the SMPC framework to bipedal robots in simulation such as PyBullet and Gazebo
+		\item Refined mathematical models and cost functions to optimize bipedal robot stability and efficiency %, preparing foundational research for publication.
+	\end{rProjExpDetails}
 
-	\begin{rSubsectiond}{\textbf{Learning Inverse Kinematics using Reinforcement Learning} -  \href{https://github.com/Sahas-Ananth/RL-FinalProject}{(GitHub)}}{\textbf{October 2022 - December 2022}\\\textit{A 7 DoF robot arm which will reach a goal location trained with Reinforcement Learning}}
-	    \item Implemented and evaluated Deep Deterministic Policy Gradients (DDPG), Twin Delayed Deep Deterministic Policy Gradients (TD3), and Soft Actor-Critic (SAC) algorithms, with TD3 demonstrating the best performance. 
-	\end{rSubsectiond}
-
-	% \begin{rSubsectiond}{\textbf{Comparative Analysis of Cartographer and ORB SLAM Algorithms}}{\textbf{November 2022 - December 2022}\\\textit{Comparing two different SLAM algorithms, Cartographer (3D) and ORB SLAM 3 on the NUance data set.}}
-	%     \item Developed and Analysed ORB-SLAM3 on the NUance data set.
-	% \end{rSubsectiond}
+	\begin{rProjExpDetails}{Implementing Batch Informed Trees (BIT*) Motion planning Algorithm}{}{March 2023 - April 2023}{Paper: \href{https://journals.sagepub.com/doi/pdf/10.1177/0278364919890396}{\textit{Batch Informed Trees (BIT*): Informed asymptotically optimal anytime search}}}{https://sahas-ananth.github.io/projects/BIT_star.html}{}
+		\item Optimized the intensive calculations in the algorithm using hash-maps, parallelization, and pre-computation in python.
+		\item Designed intuitive visualization techniques to better analyze the BIT* algorithm.
+		\item Tested the algorithm against baselines results such as RRT, RRT*, FMT*, and RRT Connect.
+	\end{rProjExpDetails}
 	%
-	% \begin{rSubsectiond}{\textbf{Intelligent Quads}, \texttt{iq\_gnc} \textbf{(an Open source Project)} - \href{https://github.com/Intelligent-Quads/iq_gnc}{GitHub}}{\textbf{June 2021}\\\textit{An Ardupilot and ROS based quadrotor project with a Guidance and Navigation System}}
-	%     \item Converted project from C$++$ to Python to make it more beginner-friendly
-	%     \item Setup C.I. Pipeline in GitHub actions
-	% \end{rSubsectiond}
+	% \begin{rProjExpDetails}{Learning Inverse Kinematics using Reinforcement Learning}{}{October 2022 - December 2022}{A 7 DoF robot arm which will reach a goal location trained with Reinforcement Learning}{https://github.com/Sahas-Ananth/RL-FinalProject}{}
+	% 	\item Implemented and evaluated Deep Deterministic Policy Gradients (DDPG), Twin Delayed Deep Deterministic Policy Gradients (TD3), and Soft Actor-Critic (SAC) algorithms, with TD3 demonstrating the best performance.
+	% \end{rProjExpDetails}
 	%
-	% \begin{rSubsectiond}{\textbf{Vargi Bots - e-Yantra Robotics Competition} - \href{https://github.com/Sahas-Ananth/Vargi_Bot_Eyantra}{GitHub}}{\textbf{November 2020 - March 2021}\\\textit{Fabricated two robot arms to sort coloured boxes simultaneously according to priority (order \& colour) in a conveyor belt}}
-	%     \item Utilized IoT, ROS, and OpenCV to receive 0 and for status updates, control robots, and for colour recognition
-	% \end{rSubsectiond}
+	% \begin{rProjExpDetails}{Comparative Analysis of Cartographer and ORB SLAM Algorithms}{}{November 2022 - December 2022}{Comparing two different SLAM algorithms, Cartographer (3D) and ORB SLAM 3 on the NUance data set.}{}{}
+	% 	\item Developed and Analysed ORB-SLAM3 on the NUance data set.
+	% \end{rProjExpDetails}
 	%
-	% \begin{rSubsectiond}{\textbf{Autonomous In-campus Drone Delivery}}{\textbf{June 2020}\\\textit{A fully autonomous delivery drone that delivers essential and nonessential products across campus.}}
-	%     \item Designed the drone in CAD software
-	%     \item Chief Architecture Officer of the software subsystem.
-	% \end{rSubsectiond}
+	% \begin{rProjExpDetails}{Intelligent Quads, \texttt{iq\_gnc} (an Open source Project)}{}{June 2021}{An Ardupilot and ROS based quadrotor project with a Guidance and Navigation System}{https://github.com/Intelligent-Quads/iq_gnc}{}
+	% 	\item Converted project from C$++$ to Python to make it more beginner-friendly
+	% 	\item Setup C.I. Pipeline in GitHub actions
+	% \end{rProjExpDetails}
+	%
+	% \begin{rProjExpDetails}{Vargi Bots - e-Yantra Robotics Competition}{}{November 2020 - March 2021}{Simulated two robot arms to sort coloured boxes simultaneously according to their priority from a conveyor}{https://github.com/Sahas-Ananth/Vargi_Bot_Eyantra}{}
+	% 	\item Utilized MQTT (IoT) for receiving orders and for status updates.
+	% 	\item OpenCV was used to recognize the color of the boxes and reading the QR codes.
+	% 	\item ROS was used to control the two robot arms.
+	% \end{rProjExpDetails}
+	%
+	% \begin{rProjExpDetails}{Autonomous In-campus Drone Delivery}{}{June 2020}{A fully autonomous delivery drone that delivers essential and nonessential products across campus.}{}{}
+	% 	\item Designed the drone in CAD software
+	% 	\item Chief Architecture Officer of the software subsystem.
+	% \end{rProjExpDetails}
 
-    \end{rSection}
+\end{rSection}
 
-    % \begin{rSection}{ACHIEVEMENTS}
-    % \begin{rSubsectiond}{Internship Winner}{\textit{July 2021}\\Indian Robotics Community Knowlege Transfer (IRCKT) Competition with a series of tasks based on ROS.}
-    % \end{rSubsectiond}
-    %
-    % \begin{rSubsectiond}{\textbf{Best paper award - International Conference Presentation EDGE 2020.}}{\textbf{March 2020}}
-    % \item Refilling a liquid-based optical lens system using a microfluidic pump and channel system in MEMS
-    % \end{rSubsectiond}
-    % \begin{rSubsectiond}{\textbf{Best paper award - International Conference Presentation EDGE 2020.}}{\textbf{March 2020}}
-    % \item Diagnosis Of Hypertrophic Cardiomyopathy Using ORB Image Matching In Python
-    % \end{rSubsectiond}
-    % \end{rSection}
-    %
-    % \begin{rSection}{RESPONSIBILITIES}
-    % \begin{rSubsectiond}{Robotics, Automation \& AI Project Head}{\textit{November 2020 - November 2021}\\Designers Consortium Club, Rajalakshmi Engineering College}
-    % \end{rSubsectiond}
-    % \end{rSection}
+% \begin{rSection}{ACHIEVEMENTS}
+% \begin{rSubsectiond}{Internship Winner}{\textit{July 2021}\\Indian Robotics Community Knowledge Transfer (IRCKT) Competition with a series of tasks based on ROS.}
+% \end{rSubsectiond}
+%
+% \begin{rSubsectiond}{\textbf{Best paper award - International Conference Presentation EDGE 2020.}}{\textbf{March 2020}}
+% \item Refilling a liquid-based optical lens system using a microfluidic pump and channel system in MEMS
+% \end{rSubsectiond}
+% \begin{rSubsectiond}{\textbf{Best paper award - International Conference Presentation EDGE 2020.}}{\textbf{March 2020}}
+% \item Diagnosis Of Hypertrophic Cardiomyopathy Using ORB Image Matching In Python
+% \end{rSubsectiond}
+% \end{rSection}
+%
+% \begin{rSection}{RESPONSIBILITIES}
+% \begin{rSubsectiond}{Robotics, Automation \& AI Project Head}{\textit{November 2020 - November 2021}\\Designers Consortium Club, Rajalakshmi Engineering College}
+% \end{rSubsectiond}
+% \end{rSection}
 \end{document}
