@@ -37,6 +37,7 @@
 \usepackage{fontspec}
 \usepackage{color,soul}
 \usepackage{enumitem}
+\usepackage[maxbibnames=99,giveninits=true]{biblatex}
 
 %--------------------------------------------------------------
 \usepackage{color}
@@ -286,7 +287,21 @@
 			\textit{#4} \hfill \href{#5}{#6}\nolinebreak
 		}
 	}
+	\vspace{-1.5mm}
 	\begin{itemize}[nosep, leftmargin=0em]
 		}{
 	\end{itemize}
 }
+
+\addbibresource{publications.bib}
+\renewcommand*{\mkbibnamegiven}[1]{%
+	\ifitemannotation{highlight}
+	{\textbf{#1}}
+	{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+	\ifitemannotation{highlight}
+	{\textbf{#1}}
+	{#1}}
+
+\DeclareFieldFormat*{title}{ \textit{"#1"} }

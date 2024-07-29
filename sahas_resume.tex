@@ -37,7 +37,9 @@
 
 % EDUCATION SECTION
 \begin{rSection}{EDUCATION}
-	\rEducation{Northeastern University}{Boston, MA}{May 2024}{Master of Science in Robotics Engineering}{3.939/4.000}{Legged Robotics, Graph Theory, Deep Learning, Autonomous Field Robotics, Mobile Robotics, Computer Vision, Reinforcement Learning \& Sequential Decision Making}
+	\rEducation{Northeastern University}{Boston, MA}{May 2024}{Master of Science in Robotics}{3.939/4.000}{Legged Robotics, Graph Theory, Deep Learning, Autonomous Field Robotics, Mobile Robotics, Computer Vision, Reinforcement Learning \& Sequential Decision Making}
+
+	\vspace{-1mm}
 
 	\rEducation{Anna University}{Chennai, India}{May 2022}{Bachelor of Engineering in Electrical and Electronics Engineering}{8.66/10.00}{}%{Digital Signal Processing, Embedded Systems, Robotics \& Machine Vision System, Control Systems, and Data Structures}\\
 \end{rSection}
@@ -46,6 +48,7 @@
 % WORK EXPERIENCE SECTION
 \begin{rSection}{WORK EXPERIENCE}
 	\begin{rProjExpDetails}{Robotics and Intelligent Vehicles Research Laboratory (RIVeR)}{Boston, MA}{May 2024 - Present}{Robotics Research Assistant, \textbf{Project:} Stochastic Model Predictive Control for bipedal loco-manipulation}{}{}
+		% \item Spearheaded and published C3PO paper.
 		\item Introduced probabilistic models into traditional control algorithm, MPC to create Stochastic MPC (SMPC), to improve adaptability and robustness against uneven terrain and unexpected loads.
 		\item Spearheaded the adaptation of the SMPC framework from quadrupedal to bipedal robots to demonstrate its generalizability, using simulation platforms such as PyBullet and Gazebo
 		\item Refined the dynamics model and cost function to satisfy the constraints of the bipedal robot to guarantee stability % and efficiency
@@ -82,15 +85,19 @@
 		\end{itemize}
 	\end{rProjExpDetails}
 
-	\begin{rProjExpDetails}{Capgemini Technologies Services}{Bangalore, India}{July 2020 - December 2020}{Robotics (Medical Devices) Intern}{https://github.com/Sahas-Ananth/ROS-ASV}{}
-		\item Fabricated a ROS-based autonomous ground vehicle in Fusion 360 to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
-		\item Led communication and task allocation for cross-functional teams and clients, boosting team efficiency and client relations
-	\end{rProjExpDetails}
+	% \begin{rProjExpDetails}{Capgemini Technologies Services}{Bangalore, India}{July 2020 - December 2020}{Robotics (Medical Devices) Intern}{https://github.com/Sahas-Ananth/ROS-ASV}{}
+	% 	\item Fabricated a ROS-based autonomous ground vehicle in Fusion 360 to sterilize and sanitize offices from SARS-COV2 virus with Ultraviolet (UV-C) irradiation
+	% 	\item Led communication and task allocation for cross-functional teams and clients, boosting team efficiency and client relations
+	% \end{rProjExpDetails}
 \end{rSection}
 % \vspace{-3mm}
+\begin{rSection}{PUBLICATIONS}
+	\nocite{*}
+	\printbibliography[heading=none]
+\end{rSection}
 \begin{rSection}{SKILLS}
 	\begin{tabular}{ @ {} >{\bfseries}l @{\hspace{3ex}} l }
-		Languages / Libraries & Python, PyTorch, JAX, C$++$, CUDA, C, MATLAB, OpenCV, Tensorflow, PCL                     \\
+		Languages / Libraries & Python, C$++$, C, MATLAB, CUDA, PyTorch, JAX, OpenCV, Tensorflow, PCL                     \\
 		Software and Tools    & ROS, Ubuntu Linux, Git, CMake, Docker, Gazebo, Nvidia Issac Sim, PyBullet, MQTT, Simulink \\
 		                      & Fusion 360, Blender, LaTeX                                                                \\
 	\end{tabular}
