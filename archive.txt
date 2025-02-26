@@ -1,0 +1,78 @@
+Header Content:
+
+% \href{mailto:anantharamakrishn.sa@northeastern.edu}{\small anantharamakrishn.sa@northeastern.edu} &
+% \href{https://github.com/Sahas-Ananth}{GitHub(Sahas-Ananth)} &
+% \href{https://goo.gl/maps/rhjbcRKJK2ePYaUHA}{Boston, MA}
+
+---
+Summary Section:
+
+% Robotics and Software Engineer with a deep passion for motion planning, classical and learning-based robotic controls. Experienced in mobile, manipulation and legged robot locomotion, with expertise in C++, Python, CUDA, and ROS. Strong research background in trajectory optimization, real-time perception, and GPU-accelerated computation.
+% \textit{\hspace{8mm}I am proactive about self-learning and gaining familiarity with new programs and skills. As such, I am able to independently work on projects and believe in ensuring a high standard of work which entails good coding practices and scalability in code. Furthermore, I am also a great team-player and appreciate the value of collaboration. In teams, I am able to assume leadership roles and maintain good teamwork environments by encouraging effective communication and motivating colleagues.}
+
+% \textit{\hspace{8mm}I'm a proactive learner and highly adaptable, with a track record of success in tackling new programs and technologies. As a graduate student at Northeastern University studying Robotics Engineering, I bring a strong foundation in this field to every project. I'm also a team player, skilled at fostering a collaborative atmosphere and stepping up to lead when needed. Above all, I'm committed to delivering top-notch results that meet the highest standards of coding practices and scalability.}
+
+---
+Work Exp:
+
+# RIVeR Lab:
+		% \item Spearheaded and published C3PO paper.
+		% \item Introduced probabilistic models into traditional control algorithm, Model Predictive Control, to create Stochastic MPC (SMPC) in \hl{bipedal} robots, to improve adaptability and robustness against uneven terrain and unexpected loads.
+		% \item Added soft-constraints to Model Predictive Control (MPC) for Bipedal Robots, to improve robustness against uncertain terrain and payload
+
+		% \item Spearheaded the adaptation of the SMPC framework from quadrupedal to bipedal robots to demonstrate its generalizability, using simulation platforms such as PyBullet and Gazebo
+		% \item Generated novel scenarios in robot simulation software, for data collection and testing of SMPC algorithm in Bipedal robots
+
+		% \item Refined the dynamics model and cost function to satisfy the constraints of the bipedal robot to guarantee stability % and efficiency
+
+# NAIL Lab:
+		% \item Developed an innovative 2.5D terrain mapping model accommodating uncertainties in both the shape and properties of challenging off-road environment
+		% \item Created and Optimized a custom MPPI algorithm using JAX python, slashing average run time from \hl{1000 ms} to \hl{1 ms}
+		% \item Crafted a custom cost function for MPPI controls, prioritizing speed in unstructured environments while considering the robot's kino-dynamics, terrain traversability, and safety constraints
+		% \item Fine-tuned STEGO perception algorithm, a self-supervised semantic segmentation head for DINOv1 vision transformer, on RUGD, RELLIS, and a custom dataset to achieve clear class clusters for RGB image semantic segmentation
+		% \item \hl{Performed training, testing, and inference on a cloud/on-premise GPU clusters} with tools such as \hl{Docker, and SLURM for job orchestration}
+		% \item Created a \hl{unique dataset} for AI using \hl{custom data pipeline} that included \hl{data collection, logging, storage, and training}
+		% \item Analysed, and tracked training failures, and experimental settings using tools such as TensorBoard, and Weights and Biases
+		% \vspace{-2mm}
+		% \item[-] Increased robustness and adaptability to diverse environments through self-supervised learning
+		% \item[-] Planned future incorporation of online learning in STEGO to increase robustness to unknown objects.
+		% \end{itemize}
+		% \item Implemented STEGO, a self-supervised semantic segmentation AI model, utilizing DINOv1 Vision Transformer as its backbone. Addressed the curse of dimensions problem, resulting in clear semantic class clusters for RGB image segmentation.
+		% \item Facilitated deployment in diverse environments by utilizing self-supervised learning of STEGO thereby reducing reliance on human annotation, and enhancing the adaptability and robustness of the algorithm.
+		% \item Designed and fabricated a custom high-speed, off-road mobile robot using Fusion 360, to enable seamless customization
+		% \item Implemented sensor fusion in ROS between 3D-LiDAR and semantic image, obtaining semantic point cloud for perception
+		% \item Employed sensor fusion techniques to combine 3D-LiDAR data with semantically segmented RGB images, resulting in a Semantic Point Cloud, essential for downstream perception, control, and motion planning tasks
+		% \item Improved the Direct LiDAR-Inertial Odometry (DLIO) SLAM algorithm to accept semantic point cloud as additional input, enabling the integration of semantic information derived from the vision transformer model
+		% \item Integrated SLAM (Simultaneous Localization and Mapping) and autonomous navigation algorithms, in both ROS1 and ROS2, enabling high-speed off-road autonomy capability in mobile robots
+		% \item Utilized Fusion 360 to engineer and assemble a customized compute and sensor suite payload, designed to meet the distinct needs of AgileX's scout and Clearpath's Warthog robotic platforms, to enable high-speed offroad autonomy capability
+		% \item Developed a novel Vision Transformer-based Deep Neural Network for Semantic Segmentation of RGB/RGB-D images.
+		% \item Incorporated Unsupervised and online -learning techniques to enhance the network's robustness.
+		% \item Designed and Fabricated a custom Mobile Robot with High-Speed, Off-Road Autonomy capabilities.
+		% \item Implemented sensor fusion between 3D-LiDAR and camera to obtain precise RGB-D images.
+
+# Rigbetal Labs:
+		% \item Simulated a multi-agent (robot) mapping environment in Gazebo ROS to create a cohesive 2D map
+		% \begin{itemize}
+		% 	\item Deployed the same in a cloud environment using AWS Robomaker to enable remote multi-user control of agents
+		% 	\item Tested and Deployed the code using a custom CI/CD pipeline to ensure safe and reliable code
+		% \end{itemize}
+
+---
+Misc Section:
+
+% \begin{rSection}{ACHIEVEMENTS}
+% \begin{rSubsectiond}{Internship Winner}{\textit{July 2021}\\Indian Robotics Community Knowledge Transfer (IRCKT) Competition with a series of tasks based on ROS.}
+% \end{rSubsectiond}
+%
+% \begin{rSubsectiond}{\textbf{Best paper award - International Conference Presentation EDGE 2020.}}{\textbf{March 2020}}
+% \item Refilling a liquid-based optical lens system using a microfluidic pump and channel system in MEMS
+% \end{rSubsectiond}
+% \begin{rSubsectiond}{\textbf{Best paper award - International Conference Presentation EDGE 2020.}}{\textbf{March 2020}}
+% \item Diagnosis Of Hypertrophic Cardiomyopathy Using ORB Image Matching In Python
+% \end{rSubsectiond}
+% \end{rSection}
+%
+% \begin{rSection}{RESPONSIBILITIES}
+% \begin{rSubsectiond}{Robotics, Automation \& AI Project Head}{\textit{November 2020 - November 2021}\\Designers Consortium Club, Rajalakshmi Engineering College}
+% \end{rSubsectiond}
+% \end{rSection}
