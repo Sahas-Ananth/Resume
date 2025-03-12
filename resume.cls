@@ -258,10 +258,13 @@
 % 6. Name of the courses (optional)
 \newcommand{\rEducation}[6]{
 	\textbf{#1}, {#2} \hfill \textbf{#3}\\
-	\textit{#4} \hfill \textbf{GPA: #5}\par
+	\textit{#4}
+	\ifthenelse{\equal{#5}{}}{}{
+		\hfill \textbf{GPA: #5}\hspace{-2mm}
+	}
 	% If the sixth argument is not specified, don't print the courses
 	\ifthenelse{\equal{#6}{}}{}{
-		\textbf{Courses:} {#6}
+		\\\textbf{Courses:} {#6}
 	}
 }
 %-------------------------------------------------------------------
